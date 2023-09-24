@@ -1,0 +1,11 @@
+# .prettierrc.yml
+
+printWidth: 80 # Maximum line length
+tabWidth: 2 # Number of spaces per indentation-level
+semi: true # Print semicolons at the ends of statements
+singleQuote: true # Use single quotes instead of double quotes
+trailingComma: "es5" # Print trailing commas wherever possible when multi-line
+bracketSpacing: true # Print spaces between brackets in object literals
+arrowParens: "always" # Include parentheses around a sole arrow function parameter
+endOfLine: "auto" # Maintain existing line endings
+vueIndentScriptAndStyle: true # Whether or not to indent the code inside <script> and <style> tags in Vue files

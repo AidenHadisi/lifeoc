@@ -1,0 +1,35 @@
+{
+  "name": "lifeoc",
+  "version": "1.0.0",
+  "description": "Life Church of Orange, California",
+  "author": "Aiden Hadisi <so.hadisi@gmail.com> (https://github.com/AidenHadisi)",
+  "license": "MIT",
+  "repository": "https://github.com/AidenHadisi/lifeoc",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "lint": "eslint --ext .ts,.js,.vue .",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/google-fonts": "^3.0.2",
+    "@nuxtjs/robots": "^3.0.0",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@vueuse/core": "^10.4.1",
+    "@vueuse/nuxt": "^10.4.1",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "nuxt": "^3.7.3",
+    "nuxt-gtag": "^1.1.1",
+    "nuxt-icon": "^0.5.0",
+    "prettier": "^3.0.3",
+    "vue-tsc": "^1.8.13"
+  }
+}
