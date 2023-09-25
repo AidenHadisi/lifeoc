@@ -13,6 +13,12 @@
         >
           {{ item }}
         </button>
+        <a
+          href="https://lifeoc.churchcenter.com/giving"
+          target="_blank"
+          class="text-black bg-yellow-500 hover:bg-yellow-400 px-4 py-2 rounded-md"
+          >Online Giving</a
+        >
       </div>
       <div class="lg:hidden" @click="toggleSidebar">
         <svg

@@ -27,12 +27,6 @@
     </div>
 
     <div class="flex flex-col justify-center mt-8 md:mt-0">
-      <a
-        href="https://lifeoc.churchcenter.com/giving"
-        target="_blank"
-        class="bg-yellow-500 hover:bg-yellow-400 text-gray-900 px-4 py-2 rounded-md"
-        >Online Giving</a
-      >
       <div class="flex justify-center space-x-4 mt-4 opacity-80">
         <a
           href="https://www.youtube.com/"

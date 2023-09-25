@@ -1,6 +1,9 @@
 <template>
   <NavBar />
   <VideoHeader />
+  <JoinUs />
+  <AboutUs />
+
   <TheFooter />
 </template>
 
