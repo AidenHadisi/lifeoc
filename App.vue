@@ -1,9 +1,6 @@
 <template>
   <NavBar />
-  <VideoHeader />
-  <JoinUs />
-  <AboutUs />
-
+  <NuxtPage />
   <TheFooter />
 </template>
 

@@ -6,13 +6,15 @@
     <div class="flex justify-between items-center">
       <div class="text-2xl tracking-wider">Life Church of Orange</div>
       <div class="hidden lg:block">
-        <button
+        <a
           v-for="item in menu"
-          :key="item"
+          :key="item.title"
+          :href="item.link"
+          :target="item.newTab ? '_blank' : '_self'"
           class="px-4 py-2 hover:text-orange-300"
         >
-          {{ item }}
-        </button>
+          {{ item.title }}
+        </a>
         <a
           href="https://lifeoc.churchcenter.com/giving"
           target="_blank"
@@ -60,13 +62,15 @@
               ></path>
             </svg>
           </button>
-          <button
+          <a
             v-for="item in menu"
-            :key="item"
+            :key="item.title"
+            :href="item.link"
+            :target="item.newTab ? '_blank' : '_self'"
             class="block px-4 py-2 mb-2 hover:text-orange-300"
           >
-            {{ item }}
-          </button>
+            {{ item.title }}
+          </a>
         </div>
       </aside>
     </transition>
@@ -74,7 +78,17 @@
 </template>
 <script setup lang="ts">
   const sidebarOpen = ref(false);
-  const menu = ['Home', 'About', 'Contact'];
+  const menu = [
+    {
+      title: 'Home',
+      link: '/',
+    },
+    {
+      title: 'C2C Study Resources',
+      link: 'https://c2cfamily.org/#resources',
+      newTab: true,
+    },
+  ];
 
   const toggleSidebar = () => {
     sidebarOpen.value = !sidebarOpen.value;
