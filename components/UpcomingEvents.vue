@@ -1,27 +1,57 @@
 <template>
-  <section class="px-4 lg:px-8 py-12 bg-gray-900 text-gray-300">
-    <h2 class="text-4xl font-bold mb-6 text-center">Upcoming Events</h2>
-    <div class="flex gap-3 items-center flex-wrap justify-center">
-      <div
-        v-for="event in events"
-        :key="event.id"
-        class="p-6 rounded-lg shadow-xl w-96 bg-slate-800 transform transition-all duration-500 hover:scale-105"
-      >
-        <h3
-          class="text-4xl font-semibold font-display text-yellow-400 uppercase tracking-widest"
+  <div
+    class="bg-[url('/img2.jpg')] min-h-[500px] relative bg-cover bg-center text-white md:bg-fixed flex items-center justify-center px-3 py-5"
+  >
+    <div class="bg-[#283252] opacity-80 absolute w-full h-full top-0 left-0" />
+    <div
+      class="relative w-full h-full"
+      data-aos="zoom-in-up"
+      data-aos-duration="3000"
+    >
+      <h2 class="text-5xl mb-8 font-display text-center">Upcoming Events</h2>
+
+      <div class="md:flex gap-3 h-full justify-center">
+        <div
+          v-for="(event, index) in events"
+          :key="event.id"
+          class="p-6 px-12 flex flex-col gap-8"
+          :class="{
+            'md:border-r max-md:border-b': index !== events.length - 1,
+          }"
         >
-          {{ moment(event.date).format('hh:mm a') }}
-        </h3>
-        <h3
-          class="text-xl font-semibold font-display text-yellow-400 uppercase mb-1"
-        >
-          {{ moment(event.date).format('ddd DD MMM') }}
-        </h3>
-        <h3 class="text-xl mb-2 font-bold">{{ event.title }}</h3>
-        <p>{{ event.description }}</p>
+          <div
+            class="w-20 h-20 bg-white border-2 border-gray-300 rounded-lg text-center shadow-lg"
+          >
+            <div class="border-b-2 border-gray-300 text-gray-500">
+              <span class="text-xs">{{
+                moment(event.date).format('ddd')
+              }}</span>
+            </div>
+            <div class="pt-1">
+              <h3 class="text-xl font-bold text-blue-400">
+                {{ moment(event.date).format('DD') }}
+              </h3>
+              <p class="text-xs mt-[-5px] text-gray-500">
+                {{ moment(event.date).format('MMM') }}
+              </p>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-3xl font-display font-semibold text-gray-200">
+              {{ event.title }}
+            </h3>
+
+            <p
+              class="text-yellow-300 font-display font-semibold tracking-wider"
+            >
+              {{ moment(event.date).format('hh:mm a') }}
+            </p>
+          </div>
+          <p class="text-gray-300 font-display">{{ event.description }}</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">

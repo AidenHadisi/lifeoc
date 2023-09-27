@@ -14,7 +14,7 @@
         class="lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center"
       >
         <h2
-          class="title-font font-display sm:text-4xl text-3xl mb-4 font-medium text-brown pb-3 border-b-2"
+          class="title-font font-display sm:text-4xl text-3xl mb-4 font-medium text-brown pb-3 border-b-2 border-gray-300"
         >
           About Us
         </h2>

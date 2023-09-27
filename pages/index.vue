@@ -1,8 +1,8 @@
 <template>
   <main>
     <VideoHeader />
-    <UpcomingEvents />
-    <JoinUs />
     <AboutUs />
+
+    <UpcomingEvents />
   </main>
 </template>
