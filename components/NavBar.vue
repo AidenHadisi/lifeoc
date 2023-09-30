@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="text-white px-6 py-4 fixed z-50 top-0 w-full border-b border-white border-opacity-20"
+    class="text-white px-6 py-4 z-50 top-0 w-full border-b border-white border-opacity-20"
     :class="backgroundColor"
   >
     <div class="flex justify-between items-center">
@@ -78,10 +78,15 @@
 </template>
 <script setup lang="ts">
   const sidebarOpen = ref(false);
+  const route = useRoute();
   const menu = [
     {
       title: 'Home',
       link: '/',
+    },
+    {
+      title: 'Contact',
+      link: '/contact',
     },
     {
       title: 'C2C Study Resources',
@@ -96,7 +101,9 @@
 
   const { y } = useWindowScroll();
   const backgroundColor = computed(() => {
-    return y.value < 60 ? 'bg-transparent' : 'bg-gray-900';
+    return y.value < 60 && route.path === '/'
+      ? 'bg-transparent fixed'
+      : 'bg-gray-900 sticky';
   });
 </script>
 

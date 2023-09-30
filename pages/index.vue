@@ -1,8 +1,9 @@
 <template>
-  <main>
+  <div>
     <VideoHeader />
     <AboutUs />
 
     <UpcomingEvents />
-  </main>
+    <YoutubeVideos />
+  </div>
 </template>
