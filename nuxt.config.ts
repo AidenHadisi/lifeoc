@@ -5,6 +5,12 @@ export default defineNuxtConfig({
     shim: false,
     typeCheck: true,
   },
+  runtimeConfig: {
+    public: {
+      youtubeApiKey: 'AIzaSyC28-XZOTiJHnLpQg5Vcc-Mcs1_LsCrn4Q',
+      youtubeChannelId: 'UCoVX240Rcw6ek5Opx2J84QA',
+    },
+  },
   modules: [
     '@nuxtjs/google-fonts',
     '@nuxtjs/tailwindcss',

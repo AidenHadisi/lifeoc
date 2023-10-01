@@ -31,45 +31,16 @@
 </template>
 
 <script setup lang="ts">
-  import axios from 'axios';
+  const activeVideo = ref<Video | null>(null);
+  const { videos } = useYoutube();
 
-  interface Video {
-    id: {
-      videoId: string;
-    };
-    snippet: {
-      title: string;
-      thumbnails: {
-        default: {
-          url: string;
-        };
-      };
-    };
+  function setActiveVideo(video: Video) {
+    activeVideo.value = video;
   }
 
-  const videos = ref<Video[]>([]);
-  const activeVideo = ref<Video | null>(null);
-
-  const fetchVideos = async () => {
-    const res = await axios.get(
-      'https://www.googleapis.com/youtube/v3/search',
-      {
-        params: {
-          channelId: 'UCoVX240Rcw6ek5Opx2J84QA',
-          part: 'snippet',
-          order: 'date',
-          maxResults: 10,
-          key: '',
-        },
-      }
-    );
-    videos.value = res.data.items;
-    activeVideo.value = res.data.items[0];
-  };
-
-  onMounted(fetchVideos);
-
-  const setActiveVideo = (video: Video) => {
-    activeVideo.value = video;
-  };
+  watch(videos, () => {
+    if (videos.value && videos.value.length > 0) {
+      setActiveVideo(videos.value[0]);
+    }
+  });
 </script>
