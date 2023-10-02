@@ -6,8 +6,6 @@
     <div class="absolute inset-0 bg-[#283252] opacity-70" />
     <div
       class="relative flex items-stretch rounded-xl bg-gray-100 bg-opacity-70"
-      data-aos="zoom-in-up"
-      data-aos-duration="3000"
     >
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13263.941103081504!2d-117.8158441!3d33.7868784!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcda16d1cca171%3A0x488f94fc622f304a!2sLife%20Church%20of%20Orange%20CA!5e0!3m2!1sen!2sus!4v1696045226879!5m2!1sen!2sus"
@@ -18,7 +16,7 @@
         class="max-w-full opacity-80 rounded-l-xl"
       ></iframe>
       <div class="p-8 text-gray-600">
-        <h1 class="text-3xl font-display mb-4 text-brown">Contact Us</h1>
+        <h1 class="text-3xl font-display mb-4 text-indigo-400">Contact Us</h1>
         <div class="flex flex-col space-y-8">
           <div class="text-center">
             <Icon class="text-3xl mb-2" name="ph:phone-call-duotone" />

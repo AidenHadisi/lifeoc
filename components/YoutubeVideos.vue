@@ -1,31 +1,36 @@
 <template>
-  <section class="p-4">
-    <h2 class="text-2xl font-bold mb-4">Recent Videos</h2>
-    <div class="grid grid-cols-4 gap-4">
-      <div
-        v-for="(video, i) in videos"
-        :key="i"
-        class="cursor-pointer"
-        @click="setActiveVideo(video)"
-      >
-        <img
-          :src="video.snippet.thumbnails.default.url"
-          alt=""
-          class="w-full"
-        />
-        <h3 class="mt-2 text-sm">{{ video.snippet.title }}</h3>
-      </div>
-    </div>
-    <div v-if="activeVideo" class="mt-8">
-      <h2 class="text-xl font-bold mb-4">
-        Now Playing: {{ activeVideo.snippet.title }}
-      </h2>
+  <section class="flex max-md:flex-col">
+    <div v-if="activeVideo" class="flex-1 flex">
       <iframe
-        :src="'https://www.youtube.com/embed/' + activeVideo.id.videoId"
-        frameborder="0"
+        :src="selectedVideoUrl"
+        class="shadow-lg h-[300px] w-full md:h-full"
         allowfullscreen
-        class="w-full h-64"
       ></iframe>
+    </div>
+    <div
+      class="w-full md:w-[400px] md:h-[600px] overflow-auto px-4 py-4 md:shadow-lg shadow-gray-400 bg-[#283252] text-white"
+    >
+      <h1
+        class="hidden md:block text-2xl mb-3 font-bold text-center border-b-2 pb-3"
+      >
+        Latest Videos
+      </h1>
+      <div class="flex md:grid grid-cols-2 gap-4">
+        <div
+          v-for="(video, i) in videos"
+          :key="i"
+          class="cursor-pointer hover:scale-105 duration-300 text-gray-300 transform min-w-[100px]"
+          :class="{ 'text-yellow-300': activeVideo === video }"
+          @click="setActiveVideo(video)"
+        >
+          <img
+            :src="video.snippet.thumbnails.high.url"
+            alt="thumbnail"
+            class="rounded-xl"
+          />
+          <h3 class="mt-2 text-xs">{{ video.snippet.title }}</h3>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -33,6 +38,13 @@
 <script setup lang="ts">
   const activeVideo = ref<Video | null>(null);
   const { videos } = useYoutube();
+
+  const selectedVideoUrl = computed(() => {
+    if (activeVideo.value) {
+      return `https://www.youtube.com/embed/${activeVideo.value.id.videoId}`;
+    }
+    return '';
+  });
 
   function setActiveVideo(video: Video) {
     activeVideo.value = video;

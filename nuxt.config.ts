@@ -1,9 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  experimental: {
+    typescriptBundlerResolution: true,
+  },
   typescript: {
     shim: false,
     typeCheck: true,
+  },
+  app: {
+    head: {
+      title: 'Life Church of Orange',
+    },
+    pageTransition: {
+      name: 'fade',
+      mode: 'out-in',
+    },
   },
   runtimeConfig: {
     public: {
