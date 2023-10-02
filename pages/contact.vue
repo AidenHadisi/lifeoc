@@ -16,7 +16,7 @@
         class="max-w-full opacity-80 rounded-l-xl"
       ></iframe>
       <div class="p-8 text-gray-600">
-        <h1 class="text-3xl font-display mb-4 text-indigo-400">Contact Us</h1>
+        <h1 class="text-3xl font-display mb-5">Contact Us</h1>
         <div class="flex flex-col space-y-8">
           <div class="text-center">
             <Icon class="text-3xl mb-2" name="ph:phone-call-duotone" />

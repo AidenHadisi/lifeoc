@@ -11,7 +11,7 @@
       class="w-full md:w-[400px] md:h-[600px] overflow-auto px-4 py-4 md:shadow-lg shadow-gray-400 bg-[#283252] text-white"
     >
       <h1
-        class="hidden md:block text-2xl mb-3 font-bold text-center border-b-2 pb-3"
+        class="hidden md:block text-2xl mb-3 font-display tracking-wider text-center border-b pb-3"
       >
         Latest Videos
       </h1>
