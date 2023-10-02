@@ -17,6 +17,9 @@
         src="/logo.png"
         class="w-[40%] z-20 opacity-60"
         alt="Life Church of Orange"
+        data-aos="zoom-in-up"
+        data-aos-duration="1000"
+        data-aos-delay="10"
       />
 
       <p class="text-2xl md:text-4xl tracking-wider text-shadow opacity-70">
