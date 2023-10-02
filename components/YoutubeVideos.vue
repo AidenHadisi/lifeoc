@@ -1,6 +1,6 @@
 <template>
   <section class="flex max-md:flex-col">
-    <div v-if="activeVideo" class="flex-1 flex">
+    <div v-if="activeVideo" class="flex-1 flex" data-aos="fade-right">
       <iframe
         :src="selectedVideoUrl"
         class="shadow-lg h-[300px] w-full md:h-full"
@@ -9,6 +9,7 @@
     </div>
     <div
       class="w-full md:w-[400px] md:h-[600px] overflow-auto px-4 py-4 md:shadow-lg shadow-gray-400 bg-[#283252] text-white"
+      data-aos="fade-left"
     >
       <h1
         class="hidden md:block text-2xl mb-3 font-display tracking-wider text-center border-b pb-3"

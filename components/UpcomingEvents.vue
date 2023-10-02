@@ -3,11 +3,7 @@
     class="bg-[url('/img2.jpg')] min-h-[500px] relative bg-cover bg-center text-white md:bg-fixed flex items-center justify-center px-3 py-5"
   >
     <div class="bg-[#283252] opacity-80 absolute w-full h-full top-0 left-0" />
-    <div
-      class="relative w-full h-full"
-      data-aos="zoom-in-up"
-      data-aos-duration="3000"
-    >
+    <div class="relative w-full h-full" data-aos="fade-up">
       <h2 class="text-5xl mb-8 font-display text-center">Upcoming Events</h2>
 
       <div class="md:flex gap-3 h-full justify-center">

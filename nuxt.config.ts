@@ -17,6 +17,7 @@ export default defineNuxtConfig({
       mode: 'out-in',
     },
   },
+  css: ['aos/dist/aos.css'],
   runtimeConfig: {
     public: {
       youtubeApiKey: 'AIzaSyC28-XZOTiJHnLpQg5Vcc-Mcs1_LsCrn4Q',

@@ -3,5 +3,3 @@
   <NuxtPage />
   <TheFooter />
 </template>
-
-<style></style>
