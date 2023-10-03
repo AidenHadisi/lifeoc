@@ -5,7 +5,7 @@
   >
     <div class="absolute inset-0 bg-[#283252] opacity-70" />
     <div
-      class="relative flex items-stretch rounded-xl bg-gray-100 bg-opacity-70"
+      class="relative md:flex items-stretch rounded-xl bg-gray-100 bg-opacity-70"
       data-aos="fade-up"
     >
       <iframe
