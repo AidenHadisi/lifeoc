@@ -1,5 +1,5 @@
 <template>
-  <section class="flex max-md:flex-col">
+  <section class="flex max-md:flex-col border-t border-gray-500">
     <div v-if="activeVideo" class="flex-1 flex" data-aos="fade-right">
       <iframe
         :src="selectedVideoUrl"
@@ -10,6 +10,7 @@
     <div
       class="w-full md:w-[400px] md:h-[600px] overflow-auto px-4 py-4 md:shadow-lg shadow-gray-400 bg-[#283252] text-white"
       data-aos="fade-left"
+      data-aos-anchor-placement="top-bottom"
     >
       <h1
         class="hidden md:block text-2xl mb-3 font-display tracking-wider text-center border-b pb-3"
@@ -42,7 +43,7 @@
 
   const selectedVideoUrl = computed(() => {
     if (activeVideo.value) {
-      return `https://www.youtube.com/embed/${activeVideo.value.id.videoId}`;
+      return `https://www.youtube.com/embed/${activeVideo.value.contentDetails.upload.videoId}`;
     }
     return '';
   });

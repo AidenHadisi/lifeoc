@@ -1,9 +1,12 @@
 export interface Video {
-  id: {
-    videoId: string;
+  contentDetails: {
+    upload: {
+      videoId: string;
+    };
   };
   snippet: {
     title: string;
+    type: string;
     description: string;
     publishedAt: string;
     thumbnails: {
@@ -20,20 +23,22 @@ interface YoutubeResponse {
 
 export function useYoutube() {
   const config = useRuntimeConfig();
-  const base = 'https://www.googleapis.com/youtube/v3/search';
+  const base = 'https://www.googleapis.com/youtube/v3/activities';
 
   const { data, error, pending } = useLazyFetch<YoutubeResponse>(base, {
     server: false,
     params: {
       channelId: config.public.youtubeChannelId,
-      part: 'snippet',
-      order: 'date',
-      maxResults: 10,
+      part: 'snippet,contentDetails',
+      maxResults: 20,
       key: config.public.youtubeApiKey,
     },
   });
 
-  const videos = computed(() => data.value?.items ?? []);
+  const videos = computed(
+    () =>
+      data.value?.items.filter((item) => item.snippet.type === 'upload') ?? []
+  );
 
   return {
     videos,
