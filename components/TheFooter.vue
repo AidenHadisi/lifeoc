@@ -53,9 +53,18 @@
       </div>
     </div>
   </div>
-  <p
-    class="text-center text-sm p-3 text-gray-400 bg-gray-900 border-t border-gray-500"
+  <div
+    class="text-center p-3 pt-1 text-gray-400 bg-gray-900 border-t border-gray-500"
   >
-    © {{ new Date().getFullYear() }} Life Church of Orange, California
-  </p>
+    <a
+      href="https://github.com/AidenHadisi/lifeoc"
+      target="_blank"
+      class="text-xl hover:text-indigo-500"
+    >
+      <Icon class="block" name="grommet-icons:github" />
+    </a>
+    <p class="text-sm">
+      © {{ new Date().getFullYear() }} Life Church of Orange, California
+    </p>
+  </div>
 </template>
