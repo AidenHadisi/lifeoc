@@ -7,7 +7,7 @@
         <img
           class="object-cover object-center rounded-lg shadow-lg shadow-gray-500"
           alt="hero"
-          src="img1.jpg"
+          src="\img1.jpg"
         />
       </div>
       <div

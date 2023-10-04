@@ -20,7 +20,7 @@
           >
             <div class="border-b-2 border-gray-300 text-gray-500">
               <span class="text-xs">{{
-                moment(event.date).format('ddd')
+                moment(event.start_date).format('ddd')
               }}</span>
             </div>
             <div class="pt-1">
@@ -28,7 +28,7 @@
                 {{ moment(event.start_date).format('DD') }}
               </h3>
               <p class="text-xs mt-[-5px] text-gray-500">
-                {{ moment(event.date).format('MMM') }}
+                {{ moment(event.start_date).format('MMM') }}
               </p>
             </div>
           </div>
