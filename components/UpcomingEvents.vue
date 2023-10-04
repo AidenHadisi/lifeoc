@@ -25,7 +25,7 @@
             </div>
             <div class="pt-1">
               <h3 class="text-xl font-bold text-blue-400">
-                {{ moment(event.date).format('DD') }}
+                {{ moment(event.start_date).format('DD') }}
               </h3>
               <p class="text-xs mt-[-5px] text-gray-500">
                 {{ moment(event.date).format('MMM') }}
@@ -40,10 +40,13 @@
             <p
               class="text-yellow-300 font-display font-semibold tracking-wider"
             >
-              {{ moment(event.date).format('hh:mm a') }}
+              {{ moment(event.start_date).format('hh:mm a') }}
             </p>
           </div>
-          <p class="text-gray-300 font-display">{{ event.description }}</p>
+          <div
+            class="text-gray-300 font-display"
+            v-html="event.description"
+          ></div>
         </div>
       </div>
     </div>
@@ -52,19 +55,5 @@
 
 <script setup lang="ts">
   import moment from 'moment';
-  const events = reactive([
-    {
-      id: 1,
-      title: 'Sunday Service',
-      date: new Date(),
-      description: 'Join us for our Sunday Service',
-    },
-    {
-      id: 2,
-      title: 'Event 2',
-      date: new Date(),
-      description: 'Description for Event 2',
-    },
-    // add more events as needed...
-  ]);
+  const { events } = useUpcomingEvents();
 </script>
