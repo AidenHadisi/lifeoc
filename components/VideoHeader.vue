@@ -27,7 +27,7 @@
       </p>
       <div class="flex justify-center space-x-4 mt-4 opacity-80">
         <a
-          href="https://www.youtube.com/"
+          href="https://www.youtube.com/channel/UCoVX240Rcw6ek5Opx2J84QA"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -38,7 +38,7 @@
           />
         </a>
         <a
-          href="https://www.facebook.com/"
+          href="https://www.facebook.com/lifechurchorangeca"
           target="_blank"
           rel="noopener noreferrer"
         >

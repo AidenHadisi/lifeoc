@@ -7,6 +7,12 @@
       <h2 class="text-5xl mb-8 font-display text-center">Upcoming Events</h2>
 
       <div class="md:flex gap-3 h-full justify-center">
+        <p
+          v-if="events.length === 0"
+          class="ont-display font-light tracking-wider text-2xl text-center"
+        >
+          No upcoming events
+        </p>
         <div
           v-for="(event, index) in events"
           :key="event.id"
