@@ -2,6 +2,8 @@
 
 Frontend for the Life Church of Orange, California website.
 
+https://lifeoc.org
+
 
 ## Setup
 
