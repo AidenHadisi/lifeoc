@@ -1,5 +1,7 @@
 <template>
-  <section class="flex max-md:flex-col border-t border-gray-500">
+  <section
+    class="flex max-md:flex-col border-t border-gray-500 w-full overflow-x-hidden"
+  >
     <div v-if="activeVideo" class="flex-1 flex" data-aos="fade-right">
       <iframe
         :src="selectedVideoUrl"

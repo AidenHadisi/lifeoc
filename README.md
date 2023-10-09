@@ -1,6 +1,6 @@
 # Life Church of Orange, California
 
-Frontend for the Life Church of Orange, California website.
+Frontend for the Life Church of Orange, California website. Powered by [Nuxt 3](https://nuxt.com/)
 
 https://lifeoc.org
 
