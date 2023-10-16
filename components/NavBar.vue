@@ -43,7 +43,7 @@
     <transition name="sidebar" mode="out-in">
       <aside
         v-if="sidebarOpen"
-        class="bg-red-brown z-50 text-white fixed top-0 right-0 w-64 h-full overflow-auto lg:relative lg:w-auto"
+        class="bg-gray-900 z-50 text-white fixed top-0 right-0 w-64 h-full overflow-auto lg:relative lg:w-auto"
       >
         <div class="p-6">
           <button class="mb-4 lg:hidden" @click="toggleSidebar">
@@ -62,6 +62,12 @@
               ></path>
             </svg>
           </button>
+          <a
+            href="https://lifeoc.churchcenter.com/giving"
+            target="_blank"
+            class="text-black block bg-yellow-500 hover:bg-yellow-400 px-4 py-2 rounded-md"
+            >Online Giving</a
+          >
           <a
             v-for="item in menu"
             :key="item.title"

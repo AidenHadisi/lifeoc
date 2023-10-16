@@ -11,11 +11,11 @@
     </video>
     <div class="absolute w-full h-full bg-[#283252] opacity-60"></div>
     <div
-      class="z-10 text-white flex flex-col items-center justify-center font-display gap-2"
+      class="z-10 text-white flex flex-col items-center justify-center font-display w-full gap-2"
     >
       <img
         src="/logo.png"
-        class="w-[40%] z-20 opacity-70"
+        class="md:w-[30%] w-[80%] z-20 opacity-70"
         alt="Life Church of Orange"
       />
 
