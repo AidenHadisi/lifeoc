@@ -22,6 +22,7 @@ export default defineNuxtConfig({
       youtubeApiKey: 'AIzaSyC28-XZOTiJHnLpQg5Vcc-Mcs1_LsCrn4Q',
       youtubeChannelId: 'UCoVX240Rcw6ek5Opx2J84QA',
       cmsUrl: 'https://cms.lifeoc.org',
+      formUrl: 'https://formspree.io/f/mkndgrjn',
     },
   },
   modules: [
