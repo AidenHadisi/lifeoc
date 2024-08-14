@@ -30,7 +30,7 @@
       icon: 'ph:cross-duotone',
     },
     {
-      title: 'Walking Togehter',
+      title: 'Walking Together',
       icon: 'ph:heart-straight-duotone',
     },
     {
