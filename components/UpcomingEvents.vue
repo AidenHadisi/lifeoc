@@ -6,7 +6,7 @@
     <div class="relative w-full h-full" data-aos="fade-up">
       <h2 class="text-5xl mb-8 font-display text-center">Upcoming Events</h2>
 
-      <div class="md:flex gap-3 h-full justify-center">
+      <div class="md:flex gap-3 h-full justify-between">
         <p
           v-if="events.length === 0"
           class="ont-display font-light tracking-wider text-2xl text-center"
@@ -16,9 +16,10 @@
         <div
           v-for="(event, index) in events"
           :key="event.id"
-          class="p-6 px-12 flex flex-col gap-8"
+          class="p-6 px-12 flex flex-col gap-4 items-center flex-1 text-center"
           :class="{
-            'md:border-r max-md:border-b': index !== events.length - 1,
+            'md:border-r max-md:border-b border-gray-400':
+              index !== events.length - 1,
           }"
         >
           <div
@@ -44,15 +45,11 @@
             </h3>
 
             <p
-              class="text-yellow-300 font-display font-semibold tracking-wider"
+              class="text-yellow-300 font-display font-semibold tracking-wider text-center"
             >
               {{ moment(event.start_date).format('hh:mm a') }}
             </p>
           </div>
-          <div
-            class="text-gray-300 font-display"
-            v-html="event.description"
-          ></div>
         </div>
       </div>
     </div>
