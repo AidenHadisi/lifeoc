@@ -19,9 +19,9 @@
         alt="Life Church of Orange"
       />
 
-      <p class="text-2xl md:text-4xl tracking-wider text-shadow opacity-70">
+      <h2 class="text-white text-3xl md:text-6xl font-bold mb-4">
         Join us Sundays at
-      </p>
+      </h2>
       <p class="text-4xl font-extrabold md:text-5xl tracking-widest text-brown">
         10:15 AM
       </p>
