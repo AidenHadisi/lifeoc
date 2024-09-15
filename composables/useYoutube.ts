@@ -37,7 +37,9 @@ export function useYoutube() {
 
   const videos = computed(
     () =>
-      data.value?.items.filter((item) => item.snippet.type === 'upload') ?? []
+      data.value?.items
+        .filter((item) => item.snippet.type === 'upload')
+        .slice(0, 5) ?? []
   );
 
   return {

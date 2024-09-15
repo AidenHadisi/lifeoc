@@ -95,6 +95,10 @@
       link: '/contact',
     },
     {
+      title: 'Latest Videos',
+      link: '#videos',
+    },
+    {
       title: 'C2C Study Resources',
       link: 'https://c2cfamily.org/#resources',
       newTab: true,

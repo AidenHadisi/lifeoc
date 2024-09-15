@@ -6,6 +6,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       AOS.init({
         duration: 2000,
         delay: 300,
+        disable: 'mobile',
       });
     });
   }

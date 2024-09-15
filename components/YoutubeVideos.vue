@@ -1,38 +1,38 @@
 <template>
   <section
-    class="flex max-md:flex-col border-t border-gray-500 w-full overflow-x-hidden"
+    id="videos"
+    class="w-full py-8 md:px-8 text-white bg-slate-900 text-center"
   >
-    <div v-if="activeVideo" class="flex-1 flex" data-aos="fade-right">
+    <h2
+      class="title-font font-display sm:text-4xl text-4xl mb-4 font-medium text-brown pb-3 border-b-2 border-gray-300 inline-block"
+    >
+      Latest Videos
+    </h2>
+    <div v-if="activeVideo" data-aos="fade-down">
       <iframe
         :src="selectedVideoUrl"
-        class="shadow-lg h-[300px] w-full md:h-full"
+        class="h-full min-h-[300px] md:min-h-[500px] md:max-w-[800px] w-full md:rounded-xl ml-auto mr-auto md:shadow-[0px_4px_16px_0px_#9b8c7961]"
         allowfullscreen
       ></iframe>
     </div>
     <div
-      class="w-full md:w-[400px] md:h-[600px] overflow-auto px-4 py-4 md:shadow-lg shadow-gray-400 bg-[#283252] text-white"
+      class="w-full overflow-auto px-4 py-8"
       data-aos="fade-left"
       data-aos-anchor-placement="top-bottom"
     >
-      <h1
-        class="hidden md:block text-2xl mb-3 font-display tracking-wider text-center border-b pb-3"
-      >
-        Latest Videos
-      </h1>
-      <div class="flex md:grid grid-cols-2 gap-4">
+      <div class="flex gap-2 md:gap-4 align-middle justify-center flex-wrap">
         <div
           v-for="(video, i) in videos"
           :key="i"
-          class="cursor-pointer hover:scale-105 duration-300 text-gray-300 transform min-w-[100px]"
-          :class="{ 'text-yellow-300': activeVideo === video }"
+          class="cursor-pointer hover:scale-105 duration-300 transform md:w-[200px] w-[100px]"
           @click="setActiveVideo(video)"
         >
           <img
             :src="video.snippet.thumbnails.high.url"
             alt="thumbnail"
-            class="rounded-xl"
+            class="rounded-xl shadow-md shadow-gray-900"
           />
-          <h3 class="mt-2 text-xs">{{ video.snippet.title }}</h3>
+          <h3 class="mt-2 text-center text-xs">{{ video.snippet.title }}</h3>
         </div>
       </div>
     </div>
