@@ -1,4 +1,5 @@
 <template>
+  <NuxtRouteAnnouncer />
   <NavBar />
   <NuxtPage />
   <TheFooter />

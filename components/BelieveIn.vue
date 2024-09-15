@@ -11,9 +11,9 @@
         <div
           v-for="value in values"
           :key="value.title"
-          class="w-100 h-100 flex flex-col space-y-8 justify-center items-center p-10 rounded-full bg-transparent transition ease-in-out duration-500 hover:bg-white hover:text-black transform hover:-translate-y-2"
+          class="w-100 h-100 flex flex-col space-y-8 justify-center items-center p-10 rounded-full bg-transparent transition ease-in-out duration-500 hover:bg-gray-300 hover:text-black transform hover:-translate-y-2"
         >
-          <Icon class="text-5xl text-red-300" :name="value.icon" />
+          <Icon class="text-5xl text-brown" :name="value.icon" />
           <div class="text-2xl md:text-3xl tracking-widest">
             {{ value.title }}
           </div>

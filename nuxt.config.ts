@@ -1,12 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  experimental: {
-    typescriptBundlerResolution: true,
-  },
+
   typescript: {
     shim: false,
   },
+
   app: {
     head: {
       title: 'Life Church of Orange',
@@ -16,7 +15,9 @@ export default defineNuxtConfig({
       mode: 'out-in',
     },
   },
+
   css: ['aos/dist/aos.css'],
+
   runtimeConfig: {
     public: {
       youtubeApiKey: 'AIzaSyC28-XZOTiJHnLpQg5Vcc-Mcs1_LsCrn4Q',
@@ -25,6 +26,7 @@ export default defineNuxtConfig({
       formUrl: 'https://formspree.io/f/mkndgrjn',
     },
   },
+
   modules: [
     '@nuxtjs/google-fonts',
     '@nuxtjs/tailwindcss',
@@ -33,10 +35,13 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-icon',
   ],
+
   googleFonts: {
     families: {
       Montserrat: [100, 200, 300, 400, 500, 600, 700, 800, 900],
       'Roboto Flex': [100, 200, 300, 400, 500, 600, 700, 800, 900],
     },
   },
+
+  compatibilityDate: '2024-09-15',
 });

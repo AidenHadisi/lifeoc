@@ -9,7 +9,7 @@
       <div class="md:flex gap-3 h-full justify-between">
         <p
           v-if="events.length === 0"
-          class="ont-display font-light tracking-wider text-2xl text-center"
+          class="ont-display tracking-wider text-2xl text-center"
         >
           No upcoming events
         </p>
@@ -18,7 +18,7 @@
           :key="event.id"
           class="p-6 px-12 flex flex-col gap-4 items-center flex-1 text-center"
           :class="{
-            'md:border-r max-md:border-b border-gray-400':
+            'md:border-r max-md:border-b border-gray-500':
               index !== events.length - 1,
           }"
         >
@@ -40,12 +40,12 @@
             </div>
           </div>
           <div>
-            <h3 class="text-3xl font-display font-semibold text-gray-200">
+            <h3 class="text-2xl font-display font-semibold text-gray-200">
               {{ event.title }}
             </h3>
 
             <p
-              class="text-yellow-300 font-display font-semibold tracking-wider text-center"
+              class="text-brown font-display font-semibold tracking-wider text-center"
             >
               {{ moment(event.start_date).format('hh:mm a') }}
             </p>

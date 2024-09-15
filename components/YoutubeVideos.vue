@@ -1,40 +1,41 @@
 <template>
   <section
     id="videos"
-    class="w-full py-8 md:px-8 text-white bg-slate-900 text-center"
+    class="flex max-md:flex-col md:py-8 md:px-8 md:gap-5 bg-gray-200"
   >
-    <h2
-      class="title-font font-display sm:text-4xl text-4xl mb-4 font-medium text-brown pb-3 border-b-2 border-gray-300 inline-block"
-    >
-      Latest Videos
-    </h2>
-    <div v-if="activeVideo" data-aos="fade-down">
-      <iframe
-        :src="selectedVideoUrl"
-        class="h-full min-h-[300px] md:min-h-[500px] md:max-w-[800px] w-full md:rounded-xl ml-auto mr-auto md:shadow-[0px_4px_16px_0px_#9b8c7961]"
-        allowfullscreen
-      ></iframe>
-    </div>
     <div
-      class="w-full overflow-auto px-4 py-8"
-      data-aos="fade-left"
+      class="bg-gray-300 md:rounded-xl shadow-lg shadow-gray-400 md:h-[640px] md:w-1/3 p-6 overflow-auto"
+      data-aos="fade-right"
       data-aos-anchor-placement="top-bottom"
     >
-      <div class="flex gap-2 md:gap-4 align-middle justify-center flex-wrap">
+      <h2 class="text-2xl mb-6 font-semibold text-brown tracking-wider">
+        Latest Videos
+      </h2>
+      <div class="gap-4 max-md:flex overflow-auto items-start">
         <div
           v-for="(video, i) in videos"
           :key="i"
-          class="cursor-pointer hover:scale-105 duration-300 transform md:w-[200px] w-[100px]"
+          class="flex max-md:flex-col items-center cursor-pointer hover:bg-gray-100 p-2 rounded-md transition min-w-[200px] max-md:gap-2"
+          :class="{ 'bg-gray-100': activeVideo === video }"
           @click="setActiveVideo(video)"
         >
           <img
             :src="video.snippet.thumbnails.high.url"
             alt="thumbnail"
-            class="rounded-xl shadow-md shadow-gray-900"
+            class="w-32 h-24 rounded-md flex-shrink-0"
           />
-          <h3 class="mt-2 text-center text-xs">{{ video.snippet.title }}</h3>
+          <h3 class="ml-4 text-xs text-gray-700">
+            {{ video.snippet.title }}
+          </h3>
         </div>
       </div>
+    </div>
+    <div v-if="activeVideo" class="flex-1" data-aos="fade-left">
+      <iframe
+        :src="selectedVideoUrl"
+        class="shadow-lg h-[300px] w-full md:h-full md:rounded-xl shadow-gray-500"
+        allowfullscreen
+      ></iframe>
     </div>
   </section>
 </template>
