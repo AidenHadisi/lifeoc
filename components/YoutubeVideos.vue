@@ -45,16 +45,6 @@
                     </div>
                     <!-- Share buttons -->
                     <div class="flex items-center gap-2">
-                      <button
-                        class="p-2 rounded-full bg-gray-700/50 hover:bg-gray-700 transition-colors text-gray-300 hover:text-white"
-                        aria-label="Share on Facebook">
-                        <Icon name="ph:facebook-logo" class="h-4 w-4" />
-                      </button>
-                      <button
-                        class="p-2 rounded-full bg-gray-700/50 hover:bg-gray-700 transition-colors text-gray-300 hover:text-white"
-                        aria-label="Share on Twitter">
-                        <Icon name="ph:twitter-logo" class="h-4 w-4" />
-                      </button>
                       <a :href="`https://www.youtube.com/watch?v=${activeVideo.contentDetails.upload.videoId}`"
                         target="_blank"
                         class="flex items-center gap-1 px-3 py-1 rounded-full bg-red-600/20 text-red-400 hover:bg-red-600 hover:text-white transition-colors text-sm">
