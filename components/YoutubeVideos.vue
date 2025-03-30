@@ -13,7 +13,7 @@
           <span>Latest <span class="text-yellow-400">Videos</span></span>
         </h2>
         <p class="text-gray-400 max-w-2xl mx-auto mt-4">
-          Watch our most recent services and messages from Life Church of Orange
+          Watch most recent services and messages from Life Church of Orange
         </p>
       </div>
 
@@ -91,7 +91,7 @@
                 <div class="flex gap-3">
                   <!-- Thumbnail with play indicator -->
                   <div class="relative flex-shrink-0">
-                    <img :src="video.snippet.thumbnails.medium.url" :alt="video.snippet.title"
+                    <img :src="video.snippet.thumbnails.high.url" :alt="video.snippet.title"
                       class="w-24 h-16 object-cover rounded-md" />
                     <div class="absolute inset-0 flex items-center justify-center">
                       <div
@@ -166,30 +166,3 @@ watch(videos, () => {
   }
 });
 </script>
-
-<style scoped>
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-</style>

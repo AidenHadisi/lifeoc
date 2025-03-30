@@ -38,7 +38,7 @@
             </a>
             <a href="#videos"
               class="px-8 py-3 rounded-lg bg-white border-2 border-gray-300 text-gray-800 font-medium transition-all hover:shadow-lg hover:border-yellow-500 transform hover:-translate-y-1 flex items-center">
-              <Icon name="heroicons:video-camera" class="mr-2" /> Watch Video
+              <Icon name="heroicons:video-camera" class="mr-2" /> Watch videos
             </a>
           </div>
         </div>

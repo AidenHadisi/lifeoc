@@ -23,7 +23,7 @@
             </div>
 
             <h3
-              class="text-2xl md:text-3xl font-bold tracking-wider mb-4 group-hover:text-yellow-300 transition-colors duration-300">
+              class="text-2xl text-center md:text-3xl font-bold tracking-wider mb-4 group-hover:text-yellow-300 transition-colors duration-300">
               {{ value.title }}
             </h3>
 
@@ -51,12 +51,12 @@ const values = [
   {
     title: 'Walking Together',
     icon: 'ph:heart-straight-duotone',
-      description: 'We are committed to authentic community, supporting one another in love as we grow in Christ.'
-    },
-    {
-      title: 'Witness to the World',
-      icon: 'ph:globe-hemisphere-west-duotone',
-      description: 'We share the Gospel through our words and actions, serving others and making disciples locally and globally.'
-    },
-  ];
+    description: 'We are committed to authentic community, supporting one another in love as we grow in Christ.'
+  },
+  {
+    title: 'Witness to the World',
+    icon: 'ph:globe-hemisphere-west-duotone',
+    description: 'We share the Gospel through our words and actions, serving others and making disciples locally and globally.'
+  },
+];
 </script>

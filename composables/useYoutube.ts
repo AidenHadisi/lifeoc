@@ -30,7 +30,7 @@ export function useYoutube() {
     params: {
       channelId: config.public.youtubeChannelId,
       part: 'snippet,contentDetails',
-      maxResults: 20,
+      maxResults: 6,
       key: config.public.youtubeApiKey,
     },
   });

@@ -37,7 +37,7 @@
       </div>
 
       <!-- Social Media with bounce effect -->
-      <div class="flex justify-center space-x-6 mt-8 animate-slideUp" style="animation-delay: 1000ms;">
+      <div class="flex justify-center space-x-6  animate-slideUp" style="animation-delay: 1000ms;">
         <a href="https://www.youtube.com/channel/UCoVX240Rcw6ek5Opx2J84QA" target="_blank" rel="noopener noreferrer"
           class="group" aria-label="YouTube">
           <div
@@ -56,9 +56,7 @@
         </a>
       </div>
 
-      <!-- Scroll indicator - fixed alignment -->
-      <div
-        class="absolute bottom-8 left-0 right-0 mx-auto flex flex-col items-center animate-bounce text-center w-full">
+      <div class="absolute bottom-0 mx-auto flex flex-col items-center animate-bounce text-center w-full mb-4">
         <p class="text-xs text-gray-300 mb-2">Scroll to Explore</p>
         <Icon name="heroicons:chevron-down" class="w-6 h-6 text-white/70" />
       </div>
