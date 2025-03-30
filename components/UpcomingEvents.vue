@@ -25,7 +25,7 @@
           <div class="flex items-center gap-4 p-4 border-b border-white/10">
             <div class="flex-shrink-0">
               <!-- Date box with improved design -->
-              <div class="w-16 h-16 bg-white rounded-lg overflow-hidden shadow-lg text-center flex flex-col">
+              <div class="w-16 h-18 bg-white rounded-lg overflow-hidden shadow-lg text-center flex flex-col">
                 <div class="bg-yellow-500 text-black font-medium">
                   <span class="text-xs uppercase">{{ formatDay(event.start_date) }}</span>
                 </div>
@@ -52,15 +52,7 @@
             <p class="line-clamp-2">{{ event.description }}</p>
           </div>
 
-          <!-- Action button -->
-          <div class="p-4 pt-0 flex justify-end">
-            <a href="#"
-              class="text-sm text-white/70 hover:text-yellow-400 transition-colors duration-300 flex items-center">
-              Details
-              <Icon name="heroicons:arrow-right"
-                class="ml-1 h-4 w-4 transform group-hover:translate-x-1 transition-transform duration-300" />
-            </a>
-          </div>
+
         </div>
       </div>
     </div>

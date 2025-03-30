@@ -23,7 +23,7 @@ export function useUpcomingEvents() {
   const { data, error, pending } = useLazyFetch<EventsResponse>(url, {
     server: false,
     params: {
-      per_page: 4,
+      per_page: 3,
       startAfter: 'now',
     },
   });
