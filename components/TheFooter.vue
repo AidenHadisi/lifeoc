@@ -39,7 +39,7 @@
           <div class="flex items-center space-x-3">
             <Icon name="ph:map-pin-line-duotone" class="text-2xl text-yellow-500" />
             <div>
-              <p>3524 E Chapman Ave</p>
+              <p>840 N Shattuck Pl</p>
               <p>Orange, CA 92869</p>
             </div>
           </div>
@@ -65,7 +65,7 @@
             </a>
           </nav>
           <div class="mt-4 pt-4 border-t border-gray-700 w-full text-center md:text-left">
-            <p class="text-sm text-gray-400">Service Times: Sundays at 10:15 AM</p>
+            <p class="text-sm text-gray-400">Service Times: Sundays at 1:00 PM</p>
           </div>
         </div>
       </div>

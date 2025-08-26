@@ -25,7 +25,7 @@
 
         <div class="relative my-4 animate-slideUp" style="animation-delay: 600ms;">
           <p class="text-4xl font-extrabold md:text-7xl tracking-widest text-white">
-            10:15 <span class="text-yellow-400">AM</span>
+            1:00 <span class="text-yellow-400">PM</span>
           </p>
           <!-- Decorative elements -->
           <div class="absolute -left-4 top-1/2 w-12 h-[2px] bg-yellow-400 transform -translate-y-1/2 hidden md:block">
