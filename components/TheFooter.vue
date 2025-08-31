@@ -44,6 +44,13 @@
             </div>
           </div>
           <div class="flex items-center space-x-3">
+            <Icon name="ph:mailbox-duotone" class="text-2xl text-blue-500" />
+            <div>
+              <p>PO Box 2523</p>
+              <p>Orange CA 92859</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
             <Icon name="ph:envelope-duotone" class="text-2xl text-red-500" />
             <p>info@lifeoc.org</p>
           </div>
