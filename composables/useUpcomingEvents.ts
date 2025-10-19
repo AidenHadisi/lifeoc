@@ -31,7 +31,9 @@ export function useUpcomingEvents() {
 
   // Get current time in ISO format for timeMin
   const now = new Date().toISOString();
-  const sevenDaysFromNow = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
+  const sevenDaysFromNow = new Date(
+    Date.now() + 7 * 24 * 60 * 60 * 1000
+  ).toISOString();
 
   const { data, error, pending } = useLazyFetch<GoogleCalendarResponse>(url, {
     server: false,
@@ -47,10 +49,14 @@ export function useUpcomingEvents() {
 
   const events = computed(() => {
     const now = new Date();
-    return data.value?.items.filter(event => {
-      const startDate = new Date(event.start.dateTime || event.start.date || '');
-      return startDate > now;
-    }) ?? [];
+    return (
+      data.value?.items.filter((event) => {
+        const startDate = new Date(
+          event.start.dateTime || event.start.date || ''
+        );
+        return startDate > now;
+      }) ?? []
+    );
   });
 
   return {
