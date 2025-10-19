@@ -31,7 +31,7 @@ export function useYoutube() {
       channelId: config.public.youtubeChannelId,
       part: 'snippet,contentDetails',
       maxResults: 20,
-      key: config.public.youtubeApiKey,
+      key: config.public.googleApiKey,
     },
   });
 

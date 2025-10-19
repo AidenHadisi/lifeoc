@@ -20,9 +20,10 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      youtubeApiKey: 'AIzaSyC28-XZOTiJHnLpQg5Vcc-Mcs1_LsCrn4Q',
+      googleApiKey: 'AIzaSyC28-XZOTiJHnLpQg5Vcc-Mcs1_LsCrn4Q',
       youtubeChannelId: 'UCoVX240Rcw6ek5Opx2J84QA',
-      cmsUrl: 'https://cms.lifeoc.org',
+      googleCalendarId:
+        '129d72ba476e5a268724ea7b31f2d40e1b1563ffd9963b2a9345c7c24d08e437@group.calendar.google.com',
       formUrl: 'https://formspree.io/f/mkndgrjn',
     },
   },

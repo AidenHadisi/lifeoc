@@ -27,22 +27,22 @@
               <!-- Date box with improved design -->
               <div class="w-16 h-18 bg-white rounded-lg overflow-hidden shadow-lg text-center flex flex-col">
                 <div class="bg-yellow-500 text-black font-medium">
-                  <span class="text-xs uppercase">{{ formatDay(event.start_date) }}</span>
+                  <span class="text-xs uppercase">{{ formatDay(getEventStartDate(event)) }}</span>
                 </div>
                 <div class="flex-1 flex flex-col justify-center leading-tight">
-                  <h3 class="text-xl font-bold text-gray-800">{{ formatDayNumber(event.start_date) }}</h3>
-                  <p class="text-xs text-gray-600">{{ formatMonth(event.start_date) }}</p>
+                  <h3 class="text-xl font-bold text-gray-800">{{ formatDayNumber(getEventStartDate(event)) }}</h3>
+                  <p class="text-xs text-gray-600">{{ formatMonth(getEventStartDate(event)) }}</p>
                 </div>
               </div>
             </div>
 
             <div class="flex-1">
               <h3 class="text-xl font-semibold text-white group-hover:text-yellow-300 transition-colors duration-300">
-                {{ event.title }}
+                {{ event.summary }}
               </h3>
               <div class="flex items-center mt-1 text-gray-300">
                 <Icon name="heroicons:clock" class="h-4 w-4 mr-1" />
-                <p class="text-sm">{{ formatTime(event.start_date) }}</p>
+                <p class="text-sm">{{ formatTime(getEventStartDate(event)) }}</p>
               </div>
             </div>
           </div>
@@ -51,8 +51,6 @@
           <div v-if="event.description" class="p-4 text-sm text-gray-300">
             <p class="line-clamp-2">{{ event.description }}</p>
           </div>
-
-
         </div>
       </div>
     </div>
@@ -62,6 +60,11 @@
 <script setup lang="ts">
 import moment from 'moment';
 const { events } = useUpcomingEvents();
+
+// Helper function to get event start date
+function getEventStartDate(event: any): string {
+  return event.start.dateTime || event.start.date;
+}
 
 // Helper functions for formatting dates
 function formatDay(date: string): string {
@@ -81,6 +84,15 @@ function formatTime(date: string): string {
 }
 </script>
 
+<style scoped>
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+</style>
 <style scoped>
 .line-clamp-2 {
   display: -webkit-box;
