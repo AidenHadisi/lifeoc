@@ -10,8 +10,8 @@
                             Online Streaming Notice
                         </p>
                         <p class="text-sm opacity-90">
-                            Our online streaming may be temporarily unavailable starting August 31st while we relocate
-                            . We appreciate your patience during this transition.
+                            Our online streaming may be temporarily unavailable while we relocate. We appreciate your
+                            patience during this transition.
                         </p>
                     </div>
                 </div>
