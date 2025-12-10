@@ -28,6 +28,10 @@
           </p>
 
           <p class="text-lg text-gray-600 leading-relaxed mb-6">
+            We are currently meeting at First Southern Baptist Church, located at 840 N Shattuck Pl, Orange, CA 92869.
+          </p>
+
+          <p class="text-lg text-gray-600 leading-relaxed mb-6">
             Life Church of Orange CA is proud to be part of the C2C family of churches.
           </p>
 

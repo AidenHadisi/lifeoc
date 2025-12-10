@@ -1,12 +1,22 @@
 <template>
-  <div class="relative flex items-center justify-center h-screen overflow-hidden">
-    <video ref="videoRef" class="absolute w-full h-full object-cover" autoplay loop muted playsinline>
-      <source src="/video.mp4" type="video/mp4" />
-    </video>
+  <div
+    class="relative flex items-center justify-center h-screen overflow-hidden bg-gradient-to-br from-slate-800 via-slate-900 to-gray-900">
+    <!-- Layered background effects for depth -->
+    <div
+      class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-700/20 via-transparent to-transparent">
+    </div>
+    <div
+      class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-transparent">
+    </div>
 
-    <!-- Multi-layer overlay for depth -->
-    <div class="absolute w-full h-full bg-gradient-to-b from-black/30 to-gray-900/70"></div>
-    <div class="absolute w-full h-full bg-[#283252] opacity-40"></div>
+    <!-- Subtle dot pattern overlay -->
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.15) 1px, transparent 0); background-size: 40px 40px;">
+    </div>
+
+    <!-- Shadow effects -->
+    <div class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/40 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/40 to-transparent"></div>
 
     <!-- Content Container -->
     <div class="z-10 text-white flex flex-col items-center justify-center w-full px-6">
@@ -65,13 +75,7 @@
 </template>
 
 <script setup lang="ts">
-const videoRef = ref<HTMLVideoElement | null>(null);
-
-onMounted(() => {
-  if (videoRef.value) {
-    videoRef.value.playbackRate = 0.6;
-  }
-});
+// No video script needed anymore
 </script>
 
 <style scoped>
