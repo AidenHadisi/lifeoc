@@ -1,18 +1,14 @@
 <template>
   <div
-    class="relative flex items-center justify-center h-screen overflow-hidden bg-gradient-to-br from-slate-800 via-slate-900 to-gray-900">
+    class="relative flex items-center justify-center h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
     <!-- Layered background effects for depth -->
     <div
       class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-700/20 via-transparent to-transparent">
     </div>
     <div
-      class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-transparent">
+      class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-slate-800/30 via-transparent to-transparent">
     </div>
 
-    <!-- Subtle dot pattern overlay -->
-    <div class="absolute inset-0 opacity-10"
-      style="background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.15) 1px, transparent 0); background-size: 40px 40px;">
-    </div>
 
     <!-- Shadow effects -->
     <div class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/40 to-transparent"></div>
