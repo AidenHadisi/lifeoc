@@ -3,7 +3,9 @@
     <div class="container mx-auto flex justify-between items-center">
       <div class="flex items-center">
         <img src="/logo.png" alt="Life Church Logo" class="h-10 mr-3" />
-        <div class="text-2xl font-bold tracking-wider">Life Church of Orange</div>
+        <div class="text-2xl font-bold tracking-wider">
+          Life Church of Orange
+        </div>
       </div>
 
       <div class="hidden lg:flex items-center space-x-2">
@@ -35,7 +37,7 @@
       :class="sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'" @click="toggleSidebar"></div>
 
     <div
-      class="fixed top-0 right-0 w-72 h-full bg-gradient-to-b from-gray-800 to-gray-900 z-50 lg:hidden transform transition-transform duration-300 ease-in-out"
+      class="fixed top-0 right-0 w-72 h-full bg-gray-900 shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-in-out"
       :class="sidebarOpen ? 'translate-x-0' : 'translate-x-full'">
       <div class="p-6 flex flex-col h-full">
         <div class="flex justify-between items-center mb-8">
@@ -106,10 +108,13 @@ const toggleSidebar = () => {
 };
 
 // Close sidebar when route changes
-watch(() => route.path, () => {
-  sidebarOpen.value = false;
-  document.body.style.overflow = '';
-});
+watch(
+  () => route.path,
+  () => {
+    sidebarOpen.value = false;
+    document.body.style.overflow = '';
+  }
+);
 
 const { y } = useWindowScroll();
 const backgroundColor = computed(() => {
