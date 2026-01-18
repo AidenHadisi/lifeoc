@@ -37,9 +37,9 @@
       :class="sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'" @click="toggleSidebar"></div>
 
     <div
-      class="fixed top-0 right-0 w-72 h-full bg-gray-900 shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-in-out"
+      class="fixed top-0 right-0 w-72 h-full shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-in-out bg-gray-900"
       :class="sidebarOpen ? 'translate-x-0' : 'translate-x-full'">
-      <div class="p-6 flex flex-col h-full">
+      <div class="p-6 flex flex-col h-full min-h-screen bg-gray-900">
         <div class="flex justify-between items-center mb-8">
           <div class="text-xl font-bold">Menu</div>
           <button @click="toggleSidebar" class="focus:outline-none text-white">
