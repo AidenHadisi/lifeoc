@@ -1,0 +1,45 @@
+---
+// src/layouts/BaseLayout.astro
+import { SEO } from 'astro-seo'
+import '../styles/global.css'
+
+interface Props {
+  title?: string
+  description?: string
+  image?: string
+}
+
+const {
+  title = 'Life Church of Orange',
+  description = 'We are a Spirit-filled, multicultural church in the City of Orange, CA.',
+  image = '/images/logo.png',
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <SEO
+      title={title}
+      titleTemplate="%s | Life Church of Orange"
+      description={description}
+      openGraph={{
+        basic: {
+          title,
+          type: 'website',
+          image,
+        },
+      }}
+    />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <slot name="header" />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <slot name="footer" />
+  </body>
+</html>
