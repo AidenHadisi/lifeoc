@@ -6,12 +6,16 @@ import Footer from '../components/layout/Footer.astro'
 import Hero from '../components/home/Hero.astro'
 import AboutSnippet from '../components/home/AboutSnippet.astro'
 import SundayBanner from '../components/home/SundayBanner.astro'
+import EventsSection from '../components/home/EventsSection.vue'
+import LatestVideo from '../components/home/LatestVideo.vue'
 ---
 
 <BaseLayout>
   <Header slot="header" />
   <Hero />
   <AboutSnippet />
+  <EventsSection client:visible />
+  <LatestVideo client:visible />
   <SundayBanner />
   <Footer slot="footer" />
 </BaseLayout>
