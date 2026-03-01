@@ -1,0 +1,84 @@
+---
+// src/components/layout/Footer.astro
+import { Icon } from 'astro-icon/components'
+---
+
+<footer class="bg-surface border-t border-border-default mt-20">
+  <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div class="flex flex-col gap-4">
+      <img src="/images/logo.png" alt="Life Church of Orange" class="h-12 w-auto" />
+      <p class="text-text-muted text-sm leading-relaxed">
+        Serving the Orange County community with the message of hope and love through Jesus Christ.
+      </p>
+      <div class="flex gap-4">
+        <a
+          href="https://www.youtube.com/channel/UCoVX240Rcw6ek5Opx2J84QA"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+          class="text-text-muted hover:text-accent transition-colors"
+        >
+          <Icon name="lucide:youtube" class="w-5 h-5" />
+        </a>
+        <a
+          href="https://www.facebook.com/lifechurchorangeca"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+          class="text-text-muted hover:text-accent transition-colors"
+        >
+          <Icon name="lucide:facebook" class="w-5 h-5" />
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-text-primary text-sm font-semibold uppercase tracking-widest mb-4" style="font-family: var(--font-display)">Quick Links</h3>
+      <ul class="flex flex-col gap-2">
+        {[
+          { href: '/', label: 'Home' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/contact', label: 'Contact' },
+          { href: 'https://lifeoc.churchcenter.com/giving', label: 'Give Online', external: true },
+        ].map(({ href, label, external }) => (
+          <li>
+            <a
+              href={href}
+              target={external ? '_blank' : undefined}
+              rel={external ? 'noopener noreferrer' : undefined}
+              class="text-text-muted text-sm hover:text-accent transition-colors"
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-text-primary text-sm font-semibold uppercase tracking-widest mb-4" style="font-family: var(--font-display)">Visit Us</h3>
+      <ul class="flex flex-col gap-3 text-sm text-text-muted">
+        <li class="flex gap-2 items-start">
+          <Icon name="lucide:map-pin" class="w-4 h-4 mt-0.5 text-accent shrink-0" />
+          <span>840 N Shattuck Pl<br />Orange, CA 92869</span>
+        </li>
+        <li class="flex gap-2 items-center">
+          <Icon name="lucide:clock" class="w-4 h-4 text-accent shrink-0" />
+          <span>Sundays at 1:00 PM</span>
+        </li>
+        <li class="flex gap-2 items-center">
+          <Icon name="lucide:phone" class="w-4 h-4 text-accent shrink-0" />
+          <a href="tel:+17147712522" class="hover:text-accent transition-colors">(714) 771-2522</a>
+        </li>
+        <li class="flex gap-2 items-center">
+          <Icon name="lucide:mail" class="w-4 h-4 text-accent shrink-0" />
+          <a href="mailto:info@lifeoc.org" class="hover:text-accent transition-colors">info@lifeoc.org</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-border-default text-center py-4 text-text-muted text-xs">
+    &copy; {new Date().getFullYear()} Life Church of Orange. All rights reserved.
+  </div>
+</footer>
