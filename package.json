@@ -1,5 +1,5 @@
 {
-  "name": "dreary-debris",
+  "name": "lifeoc",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,21 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.17.1"
+    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/vue": "^5.1.4",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/playfair-display": "^5.2.8",
+    "@iconify-json/lucide": "^1.2.95",
+    "@tailwindcss/vite": "^4.2.1",
+    "@vueuse/core": "^14.2.1",
+    "astro": "^5.17.1",
+    "astro-icon": "^1.1.5",
+    "astro-seo": "^1.1.0",
+    "date-fns": "^4.1.0",
+    "tailwindcss": "^4.2.1",
+    "vue": "^3.5.29"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.3"
   }
 }
