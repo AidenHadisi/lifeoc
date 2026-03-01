@@ -2,6 +2,15 @@
 import { ref } from 'vue'
 import { format, parseISO } from 'date-fns'
 
+interface GoogleCalendarItem {
+  id: string
+  summary?: string
+  description?: string
+  location?: string
+  start: { dateTime?: string; date?: string }
+  end?: { dateTime?: string; date?: string }
+}
+
 export interface CalendarEvent {
   id: string
   title: string
@@ -40,8 +49,8 @@ export function useGoogleCalendar() {
       if (!res.ok) throw new Error(`Calendar API error: ${res.status}`)
 
       const data = await res.json()
-      events.value = (data.items ?? []).map((item: any): CalendarEvent => {
-        const startRaw = item.start.dateTime ?? item.start.date
+      events.value = (data.items ?? [] as GoogleCalendarItem[]).map((item: GoogleCalendarItem): CalendarEvent => {
+        const startRaw = item.start.dateTime ?? item.start.date ?? ''
         const endRaw = item.end?.dateTime ?? item.end?.date ?? startRaw
         const startDate = parseISO(startRaw)
 

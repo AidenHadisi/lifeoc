@@ -1,6 +1,19 @@
 // src/composables/useYouTube.ts
 import { ref } from 'vue'
 
+interface YouTubeSearchItem {
+  id: { videoId: string }
+  snippet: {
+    title: string
+    description: string
+    publishedAt: string
+    thumbnails: {
+      medium?: { url: string }
+      default: { url: string }
+    }
+  }
+}
+
 export interface YouTubeVideo {
   id: string
   title: string
@@ -34,7 +47,7 @@ export function useYouTube() {
       if (!res.ok) throw new Error(`YouTube API error: ${res.status}`)
 
       const data = await res.json()
-      videos.value = data.items.map((item: any): YouTubeVideo => ({
+      videos.value = (data.items ?? [] as YouTubeSearchItem[]).map((item: YouTubeSearchItem): YouTubeVideo => ({
         id: item.id.videoId,
         title: item.snippet.title,
         description: item.snippet.description,
