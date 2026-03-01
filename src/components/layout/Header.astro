@@ -8,7 +8,7 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ]
 
-const currentPath = Astro.url.pathname
+const normalizedPath = Astro.url.pathname.replace(/\/$/, '') || '/'
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-base/90 backdrop-blur-md border-b border-border-default">
@@ -24,7 +24,7 @@ const currentPath = Astro.url.pathname
             href={href}
             class:list={[
               'text-sm font-body font-medium tracking-wide transition-colors duration-150',
-              currentPath === href
+              normalizedPath === href
                 ? 'text-accent'
                 : 'text-text-muted hover:text-text-primary',
             ]}
@@ -48,6 +48,7 @@ const currentPath = Astro.url.pathname
       id="menu-btn"
       class="md:hidden text-text-muted hover:text-text-primary transition-colors"
       aria-label="Toggle menu"
+      aria-expanded="false"
     >
       <Icon name="lucide:menu" class="w-6 h-6" />
     </button>
@@ -61,7 +62,7 @@ const currentPath = Astro.url.pathname
             href={href}
             class:list={[
               'text-sm font-body font-medium tracking-wide transition-colors duration-150',
-              currentPath === href ? 'text-accent' : 'text-text-muted hover:text-text-primary',
+              normalizedPath === href ? 'text-accent' : 'text-text-muted hover:text-text-primary',
             ]}
           >
             {label}
@@ -85,5 +86,8 @@ const currentPath = Astro.url.pathname
 <script>
   const btn = document.getElementById('menu-btn')
   const menu = document.getElementById('mobile-menu')
-  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'))
+  btn?.addEventListener('click', () => {
+    const isHidden = menu?.classList.toggle('hidden')
+    btn.setAttribute('aria-expanded', String(!isHidden))
+  })
 </script>

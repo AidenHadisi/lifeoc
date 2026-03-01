@@ -9,10 +9,12 @@ interface Props {
   image?: string
 }
 
+const siteUrl = import.meta.env.SITE ?? 'https://lifeoc.org'
+
 const {
   title = 'Life Church of Orange',
   description = 'We are a Spirit-filled, multicultural church in the City of Orange, CA.',
-  image = '/images/logo.png',
+  image = `${siteUrl}/images/logo.png`,
 } = Astro.props
 ---
 
