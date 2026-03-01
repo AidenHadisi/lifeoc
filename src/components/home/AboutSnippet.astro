@@ -1,0 +1,42 @@
+---
+// src/components/home/AboutSnippet.astro
+---
+
+<section id="about" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <div>
+      <h2 class="section-heading mb-6">Who We Are</h2>
+      <p class="text-text-muted leading-relaxed mb-6">
+        We are a Spirit-filled, multicultural church in the City of Orange, CA. Disciples of Jesus Christ,
+        in following Him we make disciples, as His people, God's family, we live this life together on
+        His mission to bring Him glory.
+      </p>
+      <p class="text-text-muted leading-relaxed mb-8">
+        Life Church of Orange is proud to be part of the C2C family of churches.
+      </p>
+      <a href="/contact" class="btn-outline">Plan a Visit</a>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      {[
+        {
+          title: 'Knowing God',
+          body: 'We pursue an intimate relationship with God through worship, prayer, and the study of His Word.',
+        },
+        {
+          title: 'Walking Together',
+          body: 'We are committed to authentic community, supporting one another in love as we grow in Christ.',
+        },
+        {
+          title: 'Witness to the World',
+          body: 'We share the Gospel through our words and actions, serving others and making disciples locally and globally.',
+        },
+      ].map(({ title, body }) => (
+        <div class="card p-6">
+          <h3 class="font-display text-text-primary text-lg mb-2">{title}</h3>
+          <p class="text-text-muted text-sm leading-relaxed">{body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

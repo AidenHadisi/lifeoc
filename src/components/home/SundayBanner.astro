@@ -1,0 +1,22 @@
+---
+// src/components/home/SundayBanner.astro
+import { Icon } from 'astro-icon/components'
+---
+
+<section class="py-20 px-6 bg-surface border-y border-border-default">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-accent font-body font-semibold text-sm uppercase tracking-widest mb-4">Join Us</p>
+    <h2 class="font-display text-4xl md:text-5xl text-text-primary mb-6">This Sunday</h2>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-8 text-text-muted mb-8">
+      <div class="flex items-center gap-2">
+        <Icon name="lucide:clock" class="w-5 h-5 text-accent" />
+        <span>1:00 PM</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <Icon name="lucide:map-pin" class="w-5 h-5 text-accent" />
+        <span>840 N Shattuck Pl, Orange, CA</span>
+      </div>
+    </div>
+    <a href="/contact" class="btn-primary">Get Directions</a>
+  </div>
+</section>

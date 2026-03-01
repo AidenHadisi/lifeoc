@@ -1,17 +1,17 @@
 ---
-
+// src/pages/index.astro
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Header from '../components/layout/Header.astro'
+import Footer from '../components/layout/Footer.astro'
+import Hero from '../components/home/Hero.astro'
+import AboutSnippet from '../components/home/AboutSnippet.astro'
+import SundayBanner from '../components/home/SundayBanner.astro'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <Header slot="header" />
+  <Hero />
+  <AboutSnippet />
+  <SundayBanner />
+  <Footer slot="footer" />
+</BaseLayout>
