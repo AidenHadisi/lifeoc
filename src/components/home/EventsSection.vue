@@ -16,7 +16,7 @@ onMounted(() => fetchEvents(6))
       <!-- Loading state -->
       <div v-if="loading" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
-          v-for="i in 3"
+          v-for="i in 6"
           :key="i"
           class="card p-6 animate-pulse"
         >

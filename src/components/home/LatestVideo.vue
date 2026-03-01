@@ -28,14 +28,14 @@ onMounted(() => fetchVideos(1))
           <iframe
             :src="`https://www.youtube.com/embed/${latest.id}`"
             :title="latest.title"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
             allowfullscreen
             class="w-full h-full"
           />
         </div>
         <div>
           <p class="text-accent text-sm font-body font-medium mb-2">
-            {{ format(parseISO(latest.publishedAt), 'MMMM d, yyyy') }}
+            {{ latest.publishedAt ? format(parseISO(latest.publishedAt), 'MMMM d, yyyy') : '' }}
           </p>
           <h3 class="font-display text-text-primary text-2xl md:text-3xl mb-4 leading-snug">
             {{ latest.title }}
@@ -46,6 +46,9 @@ onMounted(() => fetchVideos(1))
           <a href="/videos" class="btn-outline">View All Messages</a>
         </div>
       </div>
+
+      <!-- Empty state -->
+      <p v-else class="text-text-muted text-sm">No messages available.</p>
     </div>
   </section>
 </template>
