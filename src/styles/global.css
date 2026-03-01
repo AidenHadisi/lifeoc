@@ -1,1 +1,67 @@
+/* src/styles/global.css */
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+
 @import "tailwindcss";
+
+@theme {
+  --color-base: #0D0D0F;
+  --color-surface: #1A1A1F;
+  --color-border-default: #2A2A30;
+  --color-accent: #C9933A;
+  --color-accent-muted: #7C5A2A;
+  --color-text-primary: #F5F0E8;
+  --color-text-muted: #8A8478;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: Inter, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply bg-base text-text-primary scroll-smooth;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .section-heading {
+    font-family: var(--font-display);
+    @apply text-3xl md:text-4xl text-text-primary;
+  }
+
+  .section-heading::after {
+    content: '';
+    @apply block w-12 h-0.5 bg-accent mt-3;
+  }
+
+  .btn-primary {
+    @apply inline-block px-6 py-3 bg-accent text-base font-semibold text-sm tracking-wide uppercase rounded transition-all duration-150 hover:bg-accent/80;
+    font-family: var(--font-body);
+    box-shadow: none;
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 20px rgba(201, 147, 58, 0.3);
+  }
+
+  .btn-outline {
+    @apply inline-block px-6 py-3 border border-accent text-accent font-semibold text-sm tracking-wide uppercase rounded transition-all duration-150 hover:bg-accent/10;
+    font-family: var(--font-body);
+  }
+
+  .card {
+    @apply bg-surface border border-border-default rounded-lg transition-all duration-150 hover:border-accent/40;
+  }
+
+  .card:hover {
+    box-shadow: 0 0 24px rgba(201, 147, 58, 0.1);
+  }
+}
