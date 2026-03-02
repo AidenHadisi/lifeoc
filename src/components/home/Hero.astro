@@ -1,21 +1,38 @@
 ---
 // src/components/home/Hero.astro
-import { Icon } from 'astro-icon/components'
+import { Icon } from "astro-icon/components";
 ---
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-br from-base via-surface to-base" />
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,147,58,0.08)_0%,transparent_70%)]" />
+<section
+  class="relative min-h-screen flex items-center justify-center overflow-hidden"
+>
+  <div class="absolute inset-0 bg-linear-to-br from-base via-surface to-base">
+  </div>
+  <div
+    class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,147,58,0.08)_0%,transparent_70%)]"
+  >
+  </div>
 
-  <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center gap-8">
-    <img src="/images/logo.png" alt="Life Church of Orange" class="h-24 w-auto opacity-90" />
+  <div
+    class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center gap-8"
+  >
+    <img
+      src="/images/logo.png"
+      alt="Life Church of Orange"
+      class="h-40 w-auto opacity-90"
+    />
 
     <div>
-      <h1 class="font-display text-5xl md:text-7xl text-text-primary leading-tight mb-4">
+      <h1
+        class="font-display text-5xl md:text-7xl text-text-primary leading-tight mb-4"
+      >
         Life Church<br /><span class="text-accent">of Orange</span>
       </h1>
-      <p class="text-text-muted text-lg md:text-xl max-w-xl mx-auto leading-relaxed">
-        A Spirit-filled community following Jesus together in the City of Orange, CA.
+      <p
+        class="text-text-muted text-lg md:text-xl max-w-xl mx-auto leading-relaxed"
+      >
+        A Spirit-filled community following Jesus together in the City of
+        Orange, CA.
       </p>
     </div>
 
@@ -24,8 +41,13 @@ import { Icon } from 'astro-icon/components'
       <a href="/contact" class="btn-outline">Plan a Visit</a>
     </div>
 
-    <a href="#about" aria-label="Scroll down" class="mt-8 text-text-muted hover:text-accent transition-colors animate-bounce">
-      <Icon name="lucide:chevron-down" class="w-6 h-6" />
-    </a>
   </div>
+
+  <a
+    href="#about"
+    aria-label="Scroll down"
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 text-text-muted hover:text-accent transition-colors animate-bounce"
+  >
+    <Icon name="lucide:chevron-down" class="w-6 h-6" />
+  </a>
 </section>

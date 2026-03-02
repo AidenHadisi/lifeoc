@@ -1,93 +1,56 @@
 ---
 // src/components/layout/Header.astro
-import { Icon } from 'astro-icon/components'
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/videos', label: 'Videos' },
-  { href: '/contact', label: 'Contact' },
-]
+  { href: "/", label: "Home" },
+  { href: "/videos", label: "Videos" },
+  { href: "/contact", label: "Contact" },
+];
 
-const normalizedPath = Astro.url.pathname.replace(/\/$/, '') || '/'
+const normalizedPath = Astro.url.pathname.replace(/\/$/, "") || "/";
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-base/90 backdrop-blur-md border-b border-border-default">
-  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-3">
-      <img src="/images/logo.png" alt="Life Church of Orange" class="h-10 w-auto" />
+<header
+  class="fixed top-0 left-0 right-0 z-50 bg-base/90 backdrop-blur-md border-b border-border-default"
+>
+  <nav
+    class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4"
+  >
+    <a href="/" class="hidden sm:flex items-center gap-3 shrink-0">
+      <img
+        src="/images/logo.png"
+        alt="Life Church of Orange"
+        class="h-20 w-auto"
+      />
     </a>
 
-    <ul class="hidden md:flex items-center gap-8">
-      {navLinks.map(({ href, label }) => (
-        <li>
-          <a
-            href={href}
-            class:list={[
-              'text-sm font-body font-medium tracking-wide transition-colors duration-150',
-              normalizedPath === href
-                ? 'text-accent'
-                : 'text-text-muted hover:text-text-primary',
-            ]}
-          >
-            {label}
-          </a>
-        </li>
-      ))}
+    <ul class="flex items-center gap-4 sm:gap-8">
+      {
+        navLinks.map(({ href, label }) => (
+          <li>
+            <a
+              href={href}
+              class:list={[
+                "text-xs sm:text-sm font-body font-medium tracking-wide transition-colors duration-150",
+                normalizedPath === href
+                  ? "text-accent"
+                  : "text-text-muted hover:text-text-primary",
+              ]}
+            >
+              {label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
 
     <a
       href="https://lifeoc.churchcenter.com/giving"
       target="_blank"
       rel="noopener noreferrer"
-      class="btn-primary hidden md:inline-block"
+      class="btn-primary shrink-0 text-xs sm:text-sm px-3 sm:px-5 py-2"
     >
-      Give
+      Online Giving
     </a>
-
-    <button
-      id="menu-btn"
-      class="md:hidden text-text-muted hover:text-text-primary transition-colors"
-      aria-label="Toggle menu"
-      aria-expanded="false"
-    >
-      <Icon name="lucide:menu" class="w-6 h-6" />
-    </button>
   </nav>
-
-  <div id="mobile-menu" class="hidden md:hidden border-t border-border-default bg-base/95 backdrop-blur-md">
-    <ul class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4">
-      {navLinks.map(({ href, label }) => (
-        <li>
-          <a
-            href={href}
-            class:list={[
-              'text-sm font-body font-medium tracking-wide transition-colors duration-150',
-              normalizedPath === href ? 'text-accent' : 'text-text-muted hover:text-text-primary',
-            ]}
-          >
-            {label}
-          </a>
-        </li>
-      ))}
-      <li>
-        <a
-          href="https://lifeoc.churchcenter.com/giving"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-primary inline-block"
-        >
-          Give
-        </a>
-      </li>
-    </ul>
-  </div>
 </header>
-
-<script>
-  const btn = document.getElementById('menu-btn')
-  const menu = document.getElementById('mobile-menu')
-  btn?.addEventListener('click', () => {
-    const isHidden = menu?.classList.toggle('hidden')
-    btn.setAttribute('aria-expanded', String(!isHidden))
-  })
-</script>

@@ -5,9 +5,9 @@ import { Icon } from 'astro-icon/components'
 
 <footer class="bg-surface border-t border-border-default mt-20">
   <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-    <div class="flex flex-col gap-4">
-      <img src="/images/logo.png" alt="Life Church of Orange" class="h-12 w-auto" />
-      <p class="text-text-muted text-sm leading-relaxed">
+    <div class="flex flex-col gap-4 items-center md:items-start">
+      <img src="/images/logo.png" alt="Life Church of Orange" class="h-12 w-auto object-contain" />
+      <p class="text-text-muted text-sm leading-relaxed text-center md:text-left">
         Serving the Orange County community with the message of hope and love through Jesus Christ.
       </p>
       <div class="flex gap-4">
@@ -32,9 +32,9 @@ import { Icon } from 'astro-icon/components'
       </div>
     </div>
 
-    <div>
+    <div class="text-center md:text-left">
       <h3 class="text-text-primary text-sm font-semibold uppercase tracking-widest mb-4" style="font-family: var(--font-display)">Quick Links</h3>
-      <ul class="flex flex-col gap-2">
+      <ul class="flex flex-col gap-2 items-center md:items-start">
         {[
           { href: '/', label: 'Home' },
           { href: '/videos', label: 'Videos' },
@@ -55,9 +55,9 @@ import { Icon } from 'astro-icon/components'
       </ul>
     </div>
 
-    <div>
+    <div class="text-center md:text-left">
       <h3 class="text-text-primary text-sm font-semibold uppercase tracking-widest mb-4" style="font-family: var(--font-display)">Visit Us</h3>
-      <ul class="flex flex-col gap-3 text-sm text-text-muted">
+      <ul class="flex flex-col gap-3 text-sm text-text-muted items-center md:items-start">
         <li class="flex gap-2 items-start">
           <Icon name="lucide:map-pin" class="w-4 h-4 mt-0.5 text-accent shrink-0" />
           <span>840 N Shattuck Pl<br />Orange, CA 92869</span>

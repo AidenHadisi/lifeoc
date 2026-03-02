@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm create astro@latest . --template minimal --typescript strict --no-install --git false --skip-houston)",
+      "Bash(printf '\\\\n\\\\n\\\\n\\\\n\\\\n')",
+      "Bash(pnpm install)",
+      "Bash(pnpm astro add vue tailwind sitemap --yes)",
+      "Bash(pnpm add @vueuse/core date-fns astro-seo astro-icon @iconify-json/lucide @fontsource/playfair-display @fontsource/inter)",
+      "Bash(pnpm add -D @types/node)",
+      "Bash(pnpm build)",
+      "Bash(git -C /Users/aidenhadisi/Code/lifeoc status)",
+      "Bash(git -C /Users/aidenhadisi/Code/lifeoc log --oneline)",
+      "Bash(git -C /Users/aidenhadisi/Code/lifeoc add astro.config.mjs package.json tsconfig.json pnpm-lock.yaml public/images/ src/styles/ docs/)",
+      "Bash(git -C /Users/aidenhadisi/Code/lifeoc rm --cached .vscode/extensions.json .vscode/launch.json)",
+      "Bash(git add .gitignore)",
+      "Bash(git commit -m \"chore: add .env.local and .env.*.local to gitignore\")",
+      "Bash(git add src/styles/global.css)",
+      "Bash(git commit -m \"feat: configure Tailwind v4 design system and global styles\")",
+      "Bash(git commit -m \"fix: resolve text-base collision and use color-mix for accent shadows\")",
+      "Bash(git add src/layouts/BaseLayout.astro)",
+      "Bash(git commit -m \"feat: add BaseLayout with SEO\")",
+      "Bash(git add src/components/layout/Header.astro)",
+      "Bash(git commit -m \"feat: add Header with responsive navigation\")",
+      "Bash(git add src/components/layout/Footer.astro)",
+      "Bash(git commit -m \"feat: add Footer with links and contact info\")",
+      "Bash(git add src/layouts/BaseLayout.astro src/components/layout/Header.astro)",
+      "Bash(git commit -m \"fix: absolute OG image URL, trailing slash path normalization, aria-expanded\")",
+      "Bash(pnpm astro check)",
+      "Bash(git add src/composables/ .env.example)",
+      "Bash(git commit -m \"fix: typed API response interfaces, null guard on YouTube items, safe .env.example\")",
+      "Bash(git add src/components/home/)",
+      "Bash(git commit -m \"fix: parseISO guard, empty video state, iframe fullscreen, skeleton count\")",
+      "Bash(git add src/components/videos/ src/components/contact/ src/pages/videos.astro src/pages/contact.astro)",
+      "Bash(git commit -m \"fix: add env guard on Formspree endpoint\")",
+      "Bash(git -C /Users/aidenhadisi/Code/lifeoc remote -v)"
+    ]
+  }
+}
