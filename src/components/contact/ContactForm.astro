@@ -1,0 +1,48 @@
+---
+// src/components/contact/ContactForm.astro
+const formspreeEndpoint = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT
+---
+
+<div class="card p-8">
+  <h2 class="font-display text-text-primary text-2xl mb-6">Send a Message</h2>
+  <form
+    action={formspreeEndpoint}
+    method="POST"
+    class="flex flex-col gap-5"
+  >
+    <div>
+      <label for="name" class="block text-text-muted text-sm mb-2">Name</label>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        required
+        placeholder="Your name"
+        class="w-full bg-base border border-border-default rounded px-4 py-3 text-text-primary text-sm placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
+      />
+    </div>
+    <div>
+      <label for="email" class="block text-text-muted text-sm mb-2">Email</label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        required
+        placeholder="your@email.com"
+        class="w-full bg-base border border-border-default rounded px-4 py-3 text-text-primary text-sm placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
+      />
+    </div>
+    <div>
+      <label for="message" class="block text-text-muted text-sm mb-2">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        required
+        rows="5"
+        placeholder="How can we help?"
+        class="w-full bg-base border border-border-default rounded px-4 py-3 text-text-primary text-sm placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors resize-none"
+      />
+    </div>
+    <button type="submit" class="btn-primary text-center">Send Message</button>
+  </form>
+</div>
