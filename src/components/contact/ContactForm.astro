@@ -1,6 +1,9 @@
 ---
 // src/components/contact/ContactForm.astro
 const formspreeEndpoint = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT
+if (!formspreeEndpoint) {
+  throw new Error('PUBLIC_FORMSPREE_ENDPOINT is not set')
+}
 ---
 
 <div class="card p-8">
